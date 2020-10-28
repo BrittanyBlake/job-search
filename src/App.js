@@ -5,12 +5,17 @@ import {
 } from 'react-router-dom';
 import Job from './components/Job/Job';
 import JobList from './components/JobList/JobList';
+import Nav from './components/Nav/Nav';
 
 function App() {
   return (
     <div className="App">
       <nav>
-        <NavLink to="/"> Home</NavLink>
+        <NavLink to="/">
+          {' '}
+          <Nav />
+          {' '}
+        </NavLink>
       </nav>
       <Switch>
         <Route path="/" exact component={JobList} />
