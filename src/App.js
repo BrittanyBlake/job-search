@@ -1,10 +1,22 @@
 import React from 'react';
 import './App.css';
+import {
+  Switch, Route, NavLink, Redirect,
+} from 'react-router-dom';
+import Job from './components/Job/Job';
+import JobList from './components/JobList/JobList';
 
 function App() {
   return (
     <div className="App">
-      <h1> Jobs</h1>
+      <nav>
+        <NavLink to="/"> Home</NavLink>
+      </nav>
+      <Switch>
+        <Route path="/" exact component={JobList} />
+        <Route path="/job/:job" exact component={Job} />
+        <Redirect to="/" />
+      </Switch>
     </div>
   );
 }
