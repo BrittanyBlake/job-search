@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import PropTypes from 'prop-types';
 import Parser from 'html-react-parser';
 import { GetJob } from '../../redux/actions/JobActions';
+import Loading from '../JobList/loading/Loading';
 
 const Job = ({ match }) => {
   const jobId = match.params.job;
@@ -78,15 +79,20 @@ const Job = ({ match }) => {
       );
     }
     if (jobState.loading) {
-      return <p> Loading...</p>;
+      return (
+        <div>
+          <h1> Loading...</h1>
+          <Loading />
+        </div>
+      );
     }
 
     if (jobState.errorMsg !== '') {
       return (
-        <p>
+        <h1>
           {' '}
           {jobState.errorMsg}
-        </p>
+        </h1>
       );
     }
 
