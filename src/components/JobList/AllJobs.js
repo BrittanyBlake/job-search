@@ -70,7 +70,7 @@ export default AllJobs;
 
 AllJobs.propTypes = {
   jobList: PropTypes.shape({
-    data: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
   }),
 };
 
