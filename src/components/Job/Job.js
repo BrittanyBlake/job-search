@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import PropTypes from 'prop-types';
 import Parser from 'html-react-parser';
 import { GetJob } from '../../redux/actions/JobActions';
-import Loading from '../JobList/loading/Loading';
+import Loading from '../loading/Loading';
 
 const Job = ({ match }) => {
   const jobId = match.params.job;

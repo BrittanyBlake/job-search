@@ -5,8 +5,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import AllJobs from './AllJobs';
 import { GetJobList } from '../../redux/actions/JobActions';
-import Loading from './loading/Loading';
+import Loading from '../loading/Loading';
 import JobSearchResult from './JobSearchResult';
+import SearchBar from '../Search/SearchBar';
 
 const JobList = () => {
   const dispatch = useDispatch();
@@ -73,8 +74,7 @@ const JobList = () => {
 
   return (
     <div>
-      <input type="text" placeholder="description" onChange={handleSearch} />
-      <input type="text" placeholder="location" onChange={handleSearch} />
+      <SearchBar handleSearch={handleSearch} />
 
       <CssBaseline />
       <Container>{ShowData()}</Container>

@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import useStyles from './JobCard.styles';
-import SmallChips from './chip/Chip';
+import SmallChips from '../chip/Chip';
 
 const AllJobs = ({ jobList }) => {
   const classes = useStyles();
@@ -74,21 +74,6 @@ AllJobs.propTypes = {
   }),
 };
 
-//   match: PropTypes.shape({
-//     params: PropTypes.shape({
-//       job: PropTypes.string.isRequired,
-//     }),
-//   }),
-// };
-
 AllJobs.defaultProps = {
   jobList: [],
 };
-
-// ob.propTypes = {
-//   jobList: PropTypes.shape({
-//     data: PropTypes.shape({
-//       map: PropTypes.string.isRequired,
-//     }),
-//   }),
-// };
