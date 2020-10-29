@@ -4,8 +4,8 @@ import {
   Switch, Route, NavLink, Redirect,
 } from 'react-router-dom';
 import Job from './components/Job/Job';
-import JobList from './components/JobList/JobList';
 import Nav from './components/Nav/Nav';
+import Homepage from './container/Homepage';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         </NavLink>
       </nav>
       <Switch>
-        <Route path="/" exact component={JobList} />
+        <Route path="/" exact component={Homepage} />
         <Route path="/job/:job" exact component={Job} />
         <Redirect to="/" />
       </Switch>
