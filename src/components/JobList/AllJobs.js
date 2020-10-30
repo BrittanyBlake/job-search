@@ -36,24 +36,24 @@ const AllJobs = ({ jobList }) => {
                   height="250"
                   width="500"
                   image={
-                     job.company_logo
-                       ? job.company_logo
-                       : 'https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg'
-                   }
+                    job.company_logo
+                      ? job.company_logo
+                      : 'https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg'
+                  }
                   title={job.title}
                 />
 
                 <CardContent>
-                  <Typography gutterBottom variant="h6" component="h2">
+                  <Typography gutterBottom variant="h6" component="h2" noWrap>
                     {job.title}
                     <SmallChips props={job.type} />
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
+              <CardActions style={{ justifyContent: 'center' }}>
+                {/* <Button size="small" color="primary">
                   Apply
-                </Button>
+                </Button> */}
                 <Button size="small" color="primary">
                   <Link to={`/job/${job.id}`}> Learn More </Link>
                 </Button>

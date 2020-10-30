@@ -17,7 +17,7 @@ const JobList = () => {
 
   const [isSearchActive, setSearchActive] = useState(false);
 
-  const handleSearch = e => {
+  const handleDescSearch = e => {
     if (e.target.value === '') {
       setSearch([]);
       setSearchActive(false);
@@ -26,7 +26,22 @@ const JobList = () => {
     setSearchActive(true);
     setSearch(
       jobList.data.filter(jobFilter => {
-        const jobItem = jobFilter.description || jobFilter.location;
+        const jobItem = jobFilter.description;
+        return jobItem.toLowerCase().includes(e.target.value.toLowerCase());
+      }),
+    );
+  };
+
+  const handleLocSearch = e => {
+    if (e.target.value === '') {
+      setSearch([]);
+      setSearchActive(false);
+      return;
+    }
+    setSearchActive(true);
+    setSearch(
+      jobList.data.filter(jobFilter => {
+        const jobItem = jobFilter.location;
         return jobItem.toLowerCase().includes(e.target.value.toLowerCase());
       }),
     );
@@ -36,7 +51,7 @@ const JobList = () => {
     dispatch(GetJobList());
   };
   console.log('job:', jobList.data);
-  console.log('finding total', jobList.total_count);
+  console.log('finding total', jobList.data.type);
 
   console.log('search', search);
   React.useEffect(() => {
@@ -75,7 +90,10 @@ const JobList = () => {
 
   return (
     <div>
-      <SearchBar handleSearch={handleSearch} />
+      <SearchBar
+        handleDescSearch={handleDescSearch}
+        handleLocSearch={handleLocSearch}
+      />
 
       <CssBaseline />
       <Container>{ShowData()}</Container>

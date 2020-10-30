@@ -4,7 +4,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 350,
     flexGrow: 1,
-    height: 425,
+    height: 400,
   },
   paper: {
     padding: theme.spacing(2),
