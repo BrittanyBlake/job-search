@@ -31,4 +31,5 @@ Keyword.propTypes = {
 
 Keyword.defaultProps = {
   props: '',
+  func: () => {},
 };

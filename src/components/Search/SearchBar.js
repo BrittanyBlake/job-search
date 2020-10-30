@@ -30,3 +30,8 @@ SearchBar.propTypes = {
   handleDescSearch: PropTypes.func,
   handleLocSearch: PropTypes.func,
 };
+
+SearchBar.defaultProps = {
+  handleDescSearch: () => {},
+  handleLocSearch: () => {},
+};
