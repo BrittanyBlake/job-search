@@ -28,6 +28,19 @@ export const GetJobList = () => async dispatch => {
   }
 };
 
+export const JobLoading = () => ({
+  type: 'JOB_LOADING',
+});
+
+export const JobSuccess = job => ({
+  type: 'JOB_SUCCESS',
+  payload: job,
+});
+export const JobFailure = error => ({
+  type: 'JOB_FAIL',
+  payload: error,
+});
+
 export const GetJob = job => async dispatch => {
   try {
     dispatch({
