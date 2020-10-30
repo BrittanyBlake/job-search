@@ -32,10 +32,11 @@ const JobList = () => {
     );
   };
 
-  const FetchData = page => {
-    dispatch(GetJobList(page));
+  const FetchData = () => {
+    dispatch(GetJobList());
   };
   console.log('job:', jobList.data);
+  console.log('finding total', jobList.total_count);
 
   console.log('search', search);
   React.useEffect(() => {

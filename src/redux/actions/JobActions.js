@@ -1,15 +1,15 @@
 import axios from 'axios';
 
-export const GetJobList = page => async dispatch => {
+export const GetJobList = () => async dispatch => {
   try {
     dispatch({
       type: 'JOB_LIST_LOADING',
     });
 
-    const pageNum = page;
+    // const pageNum = 1;
 
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const targetUrl = `https://jobs.github.com/positions.json?page=${pageNum}`;
+    const targetUrl = 'https://jobs.github.com/positions.json?';
 
     const result = await axios.get(proxyUrl + targetUrl);
 
