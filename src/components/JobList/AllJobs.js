@@ -21,9 +21,10 @@ const AllJobs = ({ jobList }) => {
     <div id="list">
       <h1>
         Showing
+        {' '}
         {jobList.data.length}
         {' '}
-        Jobs on this page
+        jobs
       </h1>
       <Grid container spacing={3} direction="row">
         {jobList.data.map(job => (

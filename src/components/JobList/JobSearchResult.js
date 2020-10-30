@@ -22,9 +22,10 @@ const JobSearchResult = ({ search }) => {
     <div id="list">
       <h1>
         Showing
+        {' '}
         {search.length}
         {' '}
-        Jobs on this page
+        jobs
       </h1>
       <Grid container spacing={3} direction="row">
         {search.map(searchItem => (
@@ -45,16 +46,13 @@ const JobSearchResult = ({ search }) => {
                 />
 
                 <CardContent>
-                  <Typography gutterBottom variant="h6" component="h2">
+                  <Typography gutterBottom variant="h6" component="h2" noWrap>
                     {searchItem.title}
                     <SmallChips props={searchItem.type} />
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Apply
-                </Button>
+              <CardActions style={{ justifyContent: 'center' }}>
                 <Button size="small" color="primary">
                   <Link to={`/job/${searchItem.id}`}> Learn More </Link>
                 </Button>
