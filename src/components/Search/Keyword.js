@@ -25,6 +25,10 @@ const Keyword = ({ props, func }) => {
 export default Keyword;
 
 Keyword.propTypes = {
-  props: PropTypes.string.isRequired,
+  props: PropTypes.string,
   func: PropTypes.func.isRequired,
+};
+
+Keyword.defaultProps = {
+  props: '',
 };
