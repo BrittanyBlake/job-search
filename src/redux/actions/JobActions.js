@@ -32,10 +32,6 @@ export const JobLoading = () => ({
   type: 'JOB_LOADING',
 });
 
-export const JobSuccess = job => ({
-  type: 'JOB_SUCCESS',
-  payload: job,
-});
 export const JobFailure = error => ({
   type: 'JOB_FAIL',
   payload: error,
@@ -43,9 +39,7 @@ export const JobFailure = error => ({
 
 export const GetJob = job => async dispatch => {
   try {
-    dispatch({
-      type: 'JOB_LOADING',
-    });
+    dispatch(JobLoading());
 
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const targetUrl = `https://jobs.github.com/positions/${job}.json?`;
@@ -53,13 +47,12 @@ export const GetJob = job => async dispatch => {
     const result = await axios.get(proxyUrl + targetUrl);
 
     dispatch({
+
       type: 'JOB_SUCCESS',
       payload: result.data,
       jobId: job,
     });
   } catch (e) {
-    dispatch({
-      type: 'JOB_FAIL',
-    });
+    dispatch(JobFailure(e));
   }
 };
