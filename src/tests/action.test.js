@@ -28,7 +28,6 @@ describe('Get Job List', () => {
 });
 
 describe('Get Job', () => {
-  const parameter = 'jobs';
   const error = 'error';
   it('should create an action to get load info', () => {
     const expectedAction = {
