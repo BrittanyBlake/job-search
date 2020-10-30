@@ -1,26 +1,30 @@
 import axios from 'axios';
 
+export const JobListLoading = () => ({
+  type: 'JOB_LIST_LOADING',
+});
+
+export const JobListSuccess = jobs => ({
+  type: 'JOB_LIST_SUCCESS',
+  payload: jobs,
+});
+export const JobListFailure = error => ({
+  type: 'JOB_LIST_FAIL',
+  payload: error,
+});
+
 export const GetJobList = () => async dispatch => {
   try {
-    dispatch({
-      type: 'JOB_LIST_LOADING',
-    });
-
-    // const pageNum = 1;
+    dispatch(JobListLoading());
 
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const targetUrl = 'https://jobs.github.com/positions.json?';
 
     const result = await axios.get(proxyUrl + targetUrl);
-
-    dispatch({
-      type: 'JOB_LIST_SUCCESS',
-      payload: result.data,
-    });
+    const jobs = result.data;
+    dispatch(JobListSuccess(jobs));
   } catch (e) {
-    dispatch({
-      type: 'JOB_LIST_FAIL',
-    });
+    dispatch(JobListFailure(e));
   }
 };
 
