@@ -28,5 +28,5 @@ export default SearchBar;
 
 SearchBar.propTypes = {
   handleDescSearch: PropTypes.func,
-  handleLocSearch: PropTypes.func.isRequired,
+  handleLocSearch: PropTypes.func,
 };

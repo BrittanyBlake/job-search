@@ -26,7 +26,7 @@ export default Keyword;
 
 Keyword.propTypes = {
   props: PropTypes.string,
-  func: PropTypes.func.isRequired,
+  func: PropTypes.func,
 };
 
 Keyword.defaultProps = {
