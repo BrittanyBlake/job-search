@@ -15,7 +15,7 @@ const Keyword = ({ props, func }) => {
           type="search"
           variant="outlined"
           onChange={func}
-          style={{ width: 400 }}
+          style={{ width: 350 }}
         />
       </div>
     </form>
