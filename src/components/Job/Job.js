@@ -18,8 +18,6 @@ const Job = ({ match }) => {
     dispatch(GetJob(jobId));
   }, []);
 
-  console.log(jobState);
-
   const ShowData = () => {
     if (!_.isEmpty(jobState.data[jobId])) {
       const jobData = jobState.data[jobId];

@@ -50,10 +50,6 @@ const JobList = () => {
   const FetchData = () => {
     dispatch(GetJobList());
   };
-  console.log('job:', jobList.data);
-  console.log('finding total', jobList.data.type);
-
-  console.log('search', search);
   React.useEffect(() => {
     FetchData(2);
   }, []);
