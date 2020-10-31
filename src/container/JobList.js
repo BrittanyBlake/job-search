@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
-import AllJobs from './AllJobs';
-import { GetJobList } from '../../redux/actions/JobActions';
-import Loading from '../loading/Loading';
-import JobSearchResult from './JobSearchResult';
-import SearchBar from '../Search/SearchBar';
+import AllJobs from '../components/JobList/AllJobs';
+import { GetJobList } from '../redux/actions/JobActions';
+import Loading from '../components/loading/Loading';
+import JobSearchResult from '../components/JobList/JobSearchResult';
+import SearchBar from '../components/Search/SearchBar';
 
 const JobList = () => {
   const dispatch = useDispatch();
