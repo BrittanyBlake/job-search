@@ -52,9 +52,6 @@ const AllJobs = ({ jobList }) => {
                 </CardContent>
               </CardActionArea>
               <CardActions style={{ justifyContent: 'center' }}>
-                {/* <Button size="small" color="primary">
-                  Apply
-                </Button> */}
                 <Button size="small" color="primary">
                   <Link to={`/job/${job.id}`}> Learn More </Link>
                 </Button>
