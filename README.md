@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+<!--
+*** Thanks for checking out this README Template. If you have a suggestion that would
+*** make this better, please fork the repo and create a pull request or simply open
+*** an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/BrittanyBlake/job-search">
+    <p align="center"> <img src="https://www.pngitem.com/pimgs/m/664-6644509_icon-react-js-logo-hd-png-download.png" alt="React-logo" width="150" height="150"> </p>
+  </a>
 
-In the project directory, you can run:
+  <h2 align="center">Job Search App</h2>
+  <h3 align="center"> A Catalogue of Jobs built with React Hooks and Redux </h3>
 
-### `npm start`
+  <p align="center">
+    <a href="https://github.com/BrittanyBlake/job-search/issues">Report Bug</a>
+    · 
+    <a href="https://github.com/BrittanyBlake/job-search/issues">Request Feature</a>
+  </p>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [About the Project](#about-the-project)
+* [Installation](#installation)
+* [Live Link](#Live-Link-(Heroku))
+* [Built With](#built-with)
+* [Future Updates](#future-updates)
+* [Contact](#Authors)
+* [Acknowledgements](#acknowledgements)
 
-### `npm test`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is based on a catalogue of statistics. While building this project, I wanted to ensure that it had a real world application that relevant to the lives of many people, so I decided to build a job search webpage. The catalogue of jobs comprises of a list of the jobs returned by the [GitHub Jobs API](https://jobs.github.com/api) and a search option to filter the jobs by description or location. My webpage consists of two pages using a unique route within a Single Web Application. The first page is the list of jobs and the second page show the information about the specific job. All of the data is from the [GitHub Jobs API](https://jobs.github.com/api) and is retrieved through the redux store. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+    <img src="src/assets/jobsearch.gif" alt="gif" >
+</p>
+<!-- Live Link (Netlify) -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Live Link (Heroku)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Click here](https://brittany-job-search-app.herokuapp.com)
 
-### `npm run eject`
+<!-- INSTALLATION -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run 'Job Search App' locally, clone the repository, navigate to it's containing directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Follow these commands step by step:-  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+git@github.com:BrittanyBlake/job-search.git
+cd job-search
+npm install
+npm start
+```
 
-## Learn More
+Now it will successfully open 'Job Search App' locally in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- BUILD WITH -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Built With
 
-### Code Splitting
+- React
+- Redux
+- Redux-thunk
+- prop-types
+- Axios
+- Eslint
+- Stylelint
+- NPM
+- Github
+- Material-ui
+- [Heroku](https://brittany-job-search-app.herokuapp.com) 
+- Github Jobs Api
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- CONTACT -->
+## Authors
 
-### Analyzing the Bundle Size
+👤 **Brittany Blake**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Github: [@BrittanyBlake](https://github.com/BrittanyBlake)
+- Twitter: [@bbcodes_](https://twitter.com/bbcodes_)
+- Linkedin: [Brittany Blake](https://www.linkedin.com/in/brittany-a-blake/)
 
-### Making a Progressive Web App
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/BrittanyBlake/job-search.svg?style=flat-square
+[contributors-url]: https://github.com/BrittanyBlake/job-search/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/BrittanyBlake/job-search.svg?style=flat-square
+[forks-url]: https://github.com/BrittanyBlake/job-search/network/members
+[stars-shield]: https://img.shields.io/github/stars/BrittanyBlake/job-search?style=flat-square
+[stars-url]: https://github.com/BrittanyBlake/job-search/stargazers
+[issues-shield]: https://img.shields.io/github/issues/BrittanyBlake/job-search.svg?style=flat-square
+[issues-url]: https://github.com/BrittanyBlake/job-search/issues
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 License
 
-### Deployment
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
